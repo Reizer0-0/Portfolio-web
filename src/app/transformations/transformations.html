@@ -1,0 +1,22 @@
+<h2 class="title">All Dragon Ball Transformations</h2>
+
+<div *ngIf="loading" class="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<div *ngIf="!loading && characters.length > 0">
+  <div *ngFor="let char of characters" class="character-block">
+    <h3>{{ char.name }}</h3>
+
+    <div class="transformations-container">
+      <div *ngFor="let t of char.transformations" class="transformation-card">
+        <img [src]="t.image" [alt]="t.name" class="transformation-image" />
+        <h4>{{ t.name }}</h4>
+        <p *ngIf="t.description">{{ t.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!loading && characters.length === 0">
+  <p>No characters with transformations found.</p>
+</div>

@@ -1,0 +1,118 @@
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #ffe600;
+  text-shadow: 0 0 10px #ffcc00;
+  font-family: 'Saiyan Sans', sans-serif;
+}
+
+.character-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.character-card {
+  background: #fbeec1;
+  border: 2px solid #ff9d00;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.03);
+}
+
+.character-image {
+
+  height: 200px;
+  margin: 5%;
+  object-fit: cover;
+  border-bottom: 2px solid #ff9d00;
+}
+
+.character-details {
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.character-details h3 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #e65c00;
+}
+
+.character-details p {
+  margin: 4px 0;
+  color: #444;
+}
+
+.pagination {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.next-button {
+  background-color: #ff9d00;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.next-button:hover {
+  background-color: #e65c00;
+}
+
+.prev-button {
+  background-color: #ff9d00; 
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 10px;
+}
+
+.prev-button:hover:not(:disabled) {
+  background-color: #e65c00;
+}
+
+.prev-button:disabled {
+  background-color: #ffe1a0;
+  cursor: not-allowed;
+}
+
+.filter-input {
+  padding: 10px 14px;
+  width: 260px;
+  border-radius: 8px;
+  border: 2px solid #ff9d00;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+  background: #fff7d1;
+  color: #333;
+  font-family: 'Saiyan Sans', sans-serif;
+  box-shadow: 0 0 5px #ffcc00;
+  transition: all 0.25s ease;
+}
+
+.filter-input:focus {
+  border-color: #e65c00;
+  box-shadow: 0 0 15px #ffe600, 0 0 25px #ff9d00;
+  background: #fff1b8;
+}
+

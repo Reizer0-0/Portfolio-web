@@ -1,0 +1,135 @@
+:host {
+  display: block;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #111 0%, #1a001a 100%);
+  color: #f1f1f1;
+}
+
+.series-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+   color: #ffe600;
+  text-shadow: 0 0 10px #ffcc00;
+  font-weight: bold;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+.loading { background: #333; color: #ffcc00; }
+.error { background: #330000; color: #ff4c4c; }
+
+
+
+.episodes, .score {
+  margin: 0.25rem .75rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.synopsis {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 0.5rem .75rem 1rem;
+  max-height: 4.5rem;
+  overflow: hidden;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.series-card {
+  background: linear-gradient(145deg, #1a1a1a, #292929);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 420px; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.series-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.7);
+}
+
+.series-card img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.series-card h3 {
+  font-size: 1rem;
+  margin: 8px;
+  color: #ffeb3b;
+  text-shadow: 0 0 5px #ff9800;
+}
+
+.series-card p {
+  margin: 4px 8px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.series-card .synopsis {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.8rem;
+  color: #bbb;
+  padding: 0 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff9800 transparent;
+}
+
+.series-card .synopsis::-webkit-scrollbar {
+  width: 6px;
+}
+
+.series-card .synopsis::-webkit-scrollbar-thumb {
+  background: #ff9800;
+  border-radius: 3px;
+}
+
+.series-card button {
+  background: linear-gradient(45deg, #ff9800, #ffeb3b);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 8px 12px;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+  transition: all 0.3s ease;
+}
+
+.series-card button:hover {
+  background: linear-gradient(45deg, #ffc107, #ffee58);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.9);
+  transform: scale(1.05);
+}
+
+.series-card button:active {
+  transform: scale(0.97);
+}

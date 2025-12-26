@@ -1,0 +1,21 @@
+  <h2 class="series-title">Dragon Ball Series</h2>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="!loading && series.length">
+    <div class="series-grid">
+      <div *ngFor="let s of series" class="series-card">
+        <img [src]="s.images.jpg.large_image_url" [alt]="s.title"/>
+        <h3>{{ s.title }}</h3>
+        <p class="episodes">Episodes: {{ s.episodes || 'TBA' }}</p>
+        <p class="score">Score: {{ s.score || '-' }}</p>
+        <p class="synopsis">{{ s.synopsis }}</p>
+        <button (click)="addToFavorites(s)">Add to Favourites</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && series.length === 0">
+    <p>No series found.</p>
+  </div>

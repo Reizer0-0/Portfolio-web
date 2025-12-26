@@ -1,0 +1,109 @@
+
+.about-container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #111, #1a001a);
+  font-family: 'Segoe UI', sans-serif;
+  color: #f1f1f1;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px #000;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #222;
+  border-left: 5px solid #ffcc00;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.content-section {
+  margin-bottom: 2.5rem;
+}
+
+.content-section h2 {
+  color: #ff6600;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-section p,
+.content-section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.content-section ul {
+  padding-left: 1.2rem;
+}
+
+.section-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.2);
+}
+
+.character-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.character-gallery div {
+  text-align: center;
+  flex: 10px;
+}
+
+.character-gallery img {
+  width: 60%;
+  height: 75%;
+  border-radius: 50%;
+  background: #000;
+  padding: 5px;
+  border: 2px solid #ffcc00;
+}
+
+.character-gallery p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin: 0 0 1rem 0;
+  }
+}
